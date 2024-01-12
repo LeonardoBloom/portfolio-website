@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 body {
-    margin: 0;
-    background: url(../img/art.jpg);
+    margin: 0 auto;
+    /*background: url(img/sad.gif);*/
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Comfortaa';
     font-family: 'Montserrat', sans-serif;
     font-family: 'Varela Round', sans-serif;
-    font-weight: 700;
-    overflow: -moz-hidden-unscrollable;
-
 }
 
 header {
     background: white;
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 
 header::after {
@@ -29,8 +29,6 @@ header::after {
     width: 95%;
     padding: 10px;
 }
-
-
 
 /* making the avatar change upon hover */
 
@@ -86,15 +84,14 @@ nav ul li a {
     font-size: 17px;
 }
 
-/* the buttons in the nav highlights*/
-
-#home-button:hover {
+#home-button {
     color: #007fff;
 }
 #work-button:hover {
     color: #03ac13;
+    transition: 0.25s ease-in;
 }
-#art-button {
+#art-button:hover {
     color: #d10000;
 }
 #about-button:hover {
