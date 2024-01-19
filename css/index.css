@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Noto+Sans&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0 auto;
@@ -249,6 +253,9 @@ nav a:hover::before {
     transform: rotate(-90deg);
     position: relative;
   }
+  .arrowSliding:hover {
+    cursor: pointer;
+  }
   
   .arrow {
     width: 2vw;
@@ -447,7 +454,7 @@ nav a:hover::before {
 
     
     /* very nice bro really nice here with the childs*/
-.projects {
+/* .projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -543,8 +550,122 @@ nav a:hover::before {
         border: 3px solid #0077ff;
         cursor: pointer;
         box-shadow: 4px 4px #0077ff;
+    } */
+
+
+    /* PROJECTS GRID */
+    :root {
+        --card-height: 300px;
+        --card-width: 450px;
     }
 
+    .projects h1 {
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Comfortaa', cursive;
+        padding-bottom: 30px;
+    }
+    
+    .projects-container {
+        width: 80%;
+        margin: 0 auto;
+        
+        font-family: 'Noto Sans', sans-serif;
+    }
+    
+    .proj-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    @media only screen and (max-width: 970px) {
+        .proj-grid {
+            grid-template-columns: auto;
+        }
+    }
+    .card {
+        background-color: #007fff;
+        height: var(--card-height);
+        width: var(--card-width);
+        border-radius: 20px;
+    }
+        .card:nth-child(2) {
+            background-color: #f08080;
+        }
+        .card:nth-child(3) {
+            background-color: #90ee90;
+        }
+        .card:nth-child(4) {
+            background-color: #ffa07a;
+        }
+    
+    .card-move {
+        object-fit: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+    
+    .proj-thumb {
+        background-size: cover;
+        height: var(--card-height);
+        width: var(--card-width);
+        
+        border-radius: 20px;
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+    }
+        #proj-title {
+            text-decoration: none;
+            color: white;
+        }
+    
+    .card-move:hover .proj-thumb {
+        transform: translate(5px, -5px);
+        transition: ease-in 0.1s;
+        
+        cursor: pointer;
+    }
+    .card-move:hover .proj-thumb img {
+        transition: ease-in 0.1s;
+        filter: brightness(0.5);
+        
+    }
+        .proj-thumb:not(:hover) {
+            transform: translate(0px, 0px);
+            transition: ease-out 0.2s;
+        }
+        .proj-bkg {
+            object-fit:cover; 
+            display: block;
+            height: 100%;
+            width: 110%;
+            transform: translateX(-10px); 
+            z-index: 1; 
+            position: inherit;
+        }
+    .proj-name {
+        position: relative;
+        font-size: 45px;
+        color: WHITE;
+        z-index: 4;
+        text-align: center;
+        opacity: 0;
+        margin-top: 25%;
+        
+    }
+        .card-move:hover .proj-name {
+            opacity: 1;
+            transition: ease-in 0.25s;
+        }
+        .card-move:not(:hover) .proj-name {
+            opacity: 0;
+            transition: ease-in 0.1s;
+        }
+
+        /* PROJECTS END */
 
 /* ---- The Wave SVG Mechanics ---- */
 .spacer {
