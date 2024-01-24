@@ -12,6 +12,20 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+// CHANGE AVATAR PIC WHEN HOVERED
+
+const avatar = document.querySelector('.bigLeo');
+
+avatar.addEventListener('mouseenter', () => {
+    avatar.src = 'img/icon.png';
+});
+
+avatar.addEventListener('mouseleave', () => {
+    avatar.src = 'img/leoNorm.png';
+});
+
+// END CHANGE AVATAR
+
 
 // ARROW ANIMATION SCROLLS TO ABOUT
 const arrow = document.getElementById('arrowAnim');
