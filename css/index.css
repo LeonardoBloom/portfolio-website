@@ -323,9 +323,9 @@ nav a:hover::before {
         background-size: cover;
         
     }
-        .pic_desc_pic img {
+        /* .pic_desc_pic img {
 
-        }
+        } */
     .pic_desc_desc {
         
         margin-top: 10px;
