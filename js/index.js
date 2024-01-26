@@ -31,7 +31,7 @@ avatar.addEventListener('mouseleave', () => {
 const arrow = document.getElementById('arrowAnim');
 var aboutScroll = document.querySelector('.info');
 
-var Arrowtarget = aboutScroll.offsetTop - 50;
+var Arrowtarget = aboutScroll.offsetTop - 70;
 
 arrow.addEventListener('click', () => {
     window.scrollTo({
@@ -45,7 +45,7 @@ arrow.addEventListener('click', () => {
 const projectsButton = document.getElementById('work-button');
 const projects = document.querySelector('.projects');
 
-var ProjTarget = projects.offsetTop - 70;
+var ProjTarget = projects.offsetTop - 60;
 
 projectsButton.addEventListener('click', () => {
     window.scrollTo({
@@ -58,16 +58,19 @@ projectsButton.addEventListener('click', () => {
 
 
 /** This code is unused */
-const observerUp = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('showUp');
-        } else {
-            entry.target.classList.remove('showUp');
-        }
-    });
-});
 
-const hiddenElementsUpward = document.querySelectorAll('.hiddenUp');
-hiddenElementsUpward.forEach((ell) => observerUp.observe(ell));
+
+
+// const observerUp = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         console.log(entry)
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('showUp');
+//         } else {
+//             entry.target.classList.remove('showUp');
+//         }
+//     });
+// });
+
+// const hiddenElementsUpward = document.querySelectorAll('.hiddenUp');
+// hiddenElementsUpward.forEach((ell) => observerUp.observe(ell));

@@ -258,6 +258,8 @@ nav a:hover::before {
     align-items: center;
     transform: rotate(-90deg);
     position: relative;
+    z-index: 33;
+    top: -10px;
   }
   .arrowSliding:hover {
     cursor: pointer;
@@ -312,6 +314,9 @@ nav a:hover::before {
     color: white;
     text-align: center;
     font-family: 'Comfortaa', cursive;
+}
+.introText {
+    padding-bottom: 30px;
 }
 
 .pic_desc {
@@ -834,7 +839,11 @@ nav a:hover::before {
 }
 
 }
-/* TABLE END */
+/* TABLET END */
+
+@media only screen and (max-width: 780px) {
+
+}
 
 /* PHONE RESOLUTION */
 
