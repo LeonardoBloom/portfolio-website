@@ -56,6 +56,17 @@ projectsButton.addEventListener('click', () => {
 
 // END PROJECTS SCROLL
 
+// when scrolled, header gets box-shadow
+const navbar = document.getElementById('theNav');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled-header')
+    } else if (window.scrollY < 50) {
+        navbar.classList.remove('scrolled-header')
+    }
+})
+
 
 /** This code is unused */
 

@@ -24,13 +24,18 @@ header {
     position: fixed;
     width: 100%;
     z-index: 3;
+    transition: ease 0.2s;
 }
 
 header::after {
     content:'';
     display: table;
     clear: both;
+}
 
+.scrolled-header {
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.03);
+    transition: ease .2s;
 }
 
 .topnav {
@@ -252,7 +257,7 @@ nav a:hover::before {
 /* ARROW DOWN */ 
 #arrowAnim {
     width: 100vw;
-    height: 5vh;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -358,6 +363,7 @@ nav a:hover::before {
     height: 40px;
     display: flex;
     justify-content: center;
+    
 }
     .resume_dl button {
         border: 3px solid white;
@@ -367,12 +373,12 @@ nav a:hover::before {
         height: 40px;
         outline: none;
         margin: auto;
+        cursor: pointer;
     }
     .resume_dl button:hover {
-        cursor: pointer;
         background-color: white;
         color: #0066FF;
-        transition: ease-in .2s;
+        transition: ease-in .1s;
     }
     .resume_dl button:active {
         width: 149px;
