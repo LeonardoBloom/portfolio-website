@@ -45,7 +45,7 @@ arrow.addEventListener('click', () => {
 const projectsButton = document.getElementById('work-button');
 const projects = document.querySelector('.projects');
 
-var ProjTarget = projects.offsetTop - 55;
+var ProjTarget = projects.offsetTop - 70;
 
 projectsButton.addEventListener('click', () => {
     window.scrollTo({
