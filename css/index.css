@@ -256,7 +256,7 @@ nav a:hover::before {
 
 /* ARROW DOWN */ 
 #arrowAnim {
-    width: 100vw;
+    width: 100px;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -265,7 +265,8 @@ nav a:hover::before {
     position: relative;
     z-index: 33;
     top: -10px;
-  }
+    margin: 0 auto;
+}
   .arrowSliding:hover {
     cursor: pointer;
   }
@@ -363,6 +364,7 @@ nav a:hover::before {
     height: 40px;
     display: flex;
     justify-content: center;
+    z-index: 43;
     
 }
     .resume_dl button {
@@ -376,6 +378,7 @@ nav a:hover::before {
         cursor: pointer;
     }
     .resume_dl button:hover {
+        cursor: pointer;
         background-color: white;
         color: #0066FF;
         transition: ease-in .1s;
