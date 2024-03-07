@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+body {
+    margin: 0 auto;
+    /*background: url(img/sad.gif);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Comfortaa';
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+
+header {
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+
+}
+
+.topnav {
+    margin: 0 auto;
+    width: 95%;
+    padding: 10px;
+}
+
+/* making the avatar change upon hover */
+
+.leoActiv, .leoAvatar {
+    width:275px;
+}
+
+.leo img {
+    object-fit: cover;
+}
+
+.leoActiv{
+    display:none;
+}
+
+.leo:hover .leoAvatar {
+    display:none;
+}
+
+.leo:hover .leoActiv {
+    display:inline-block;
+}
+
+.leo:hover {
+    cursor: pointer;
+}
+
+
+/* -------------- NAV SECTION OF TOP BAR ----------------------*/
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 80px;
+    padding-top: 15px;
+
+    position: relative;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+#home-button {
+    color: #007fff;
+}
+#work-button:hover {
+    color: #03ac13;
+    transition: 0.25s ease-in;
+}
+#art-button:hover {
+    color: #d10000;
+}
+#about-button:hover {
+    color: rgb(105, 105, 105);
+}
+
+nav a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: black ;
+
+    position: absolute;
+    top: 5px;
+    width: 0;
+    
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+
+
+/*-------------------------- THE MAIN SECTION ----------------------*/
+
+
+
+main .content{
+    margin: auto;
+    padding: 5%;
+}
+
+h1 {
+    color:white;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Inter', sans-serif;
+    font-size: 400%;
+    text-shadow: 2px 2px 2px black;
+    stroke: black;
+}
+
+p {
+    font-size: 120%;
+}
+
+
+/*------------------FOOTER---------------------*/
+
