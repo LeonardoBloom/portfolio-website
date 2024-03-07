@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 1. fade-in animation for all contents on scroll ###
 2. "about" in landing page ###
 3. "projects"/work in landing page ###
 4. social links on footer ###
 5. copyright tag on footer ###
+=======
+1. fade-in animation for all contents on scroll ###
+2. "about" in landing page ###
+3. "projects"/work in landing page ###
+4. social links on footer ###
+5. copyright tag on footer ###
+>>>>>>> b0de3761e5fbab478a3c591853320b1ac957c2a6
 6. contact page with form that sends email to me
