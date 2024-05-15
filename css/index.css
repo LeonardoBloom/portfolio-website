@@ -287,7 +287,7 @@ nav a:hover::before {
   
   .delay1 {
     -webkit-animation-delay: 1s; 
-      animation-delay: 1s;
+    animation-delay: 1s;
   }
   .delay2 {
     -webkit-animation-delay: 2s; 
@@ -608,15 +608,6 @@ nav a:hover::before {
         width: var(--card-width);
         border-radius: 20px;
     }
-        .card:nth-child(2) {
-            background-color: #90ee90;
-        }
-        .card:nth-child(4) {
-            background-color: #f08080;
-        }
-        .card:nth-child(8) {
-            background-color: #ffa07a;
-        }
     
     .card-move {
         object-fit: cover;

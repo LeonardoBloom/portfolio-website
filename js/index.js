@@ -1,3 +1,4 @@
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
@@ -65,7 +66,42 @@ window.addEventListener('scroll', () => {
     } else if (window.scrollY < 50) {
         navbar.classList.remove('scrolled-header')
     }
-})
+});
+
+
+let card = document.querySelectorAll(".proj-grid");
+
+// Iterate over each 'proj-grid' element
+card.forEach(function(projGrid) {
+    // Get all children with the class 'card' within this 'proj-grid' element
+    var cards = projGrid.querySelectorAll('.card');
+
+    // Iterate over each 'card' element and assign a random background color
+    cards.forEach(function(card) {
+        // Generate a random hexadecimal color
+        var randomHexColor = getRandomColor();
+        // Set the background color of the 'card' element
+        card.style.backgroundColor = randomHexColor;
+    });
+});
+
+
+function getRandomColor() {
+    // Generate random values for red, green, and blue components
+    var r = Math.floor(Math.random() * (256 - 100) + 100); // Random integer between 0 and 255
+    var g = Math.floor(Math.random() * (256 - 100) + 100);
+    var b = Math.floor(Math.random() * (256 - 100) + 100);
+
+    // Convert decimal to hexadecimal
+    var rHex = r.toString(16).padStart(2, '0'); // Convert to hexadecimal and pad with zero if necessary
+    var gHex = g.toString(16).padStart(2, '0');
+    var bHex = b.toString(16).padStart(2, '0');
+
+    // Construct the CSS color string in hexadecimal format
+    var color = "#" + rHex + gHex + bHex;
+
+    return color;
+}
 
 
 /** This code is unused */
