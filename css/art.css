@@ -1,5 +1,12 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
 
 body {
     margin: 0 auto;
@@ -9,6 +16,7 @@ body {
     font-family: 'Comfortaa';
     font-family: 'Montserrat', sans-serif;
     font-family: 'Varela Round', sans-serif;
+    width: 100%;
 }
 
 header {
@@ -16,13 +24,18 @@ header {
     position: fixed;
     width: 100%;
     z-index: 3;
+    transition: ease 0.2s;
 }
 
 header::after {
     content:'';
     display: table;
     clear: both;
+}
 
+.scrolled-header {
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.03);
+    transition: ease .2s;
 }
 
 .topnav {
@@ -85,14 +98,18 @@ nav ul li a {
     font-size: 17px;
 }
 
-#home-button {
+#theNav {
+    top: 0;
+}
+
+#home-button:hover {
     color: #007fff;
 }
 #work-button:hover {
     color: #03ac13;
     transition: 0.25s ease-in;
 }
-#art-button:hover {
+#art-button {
     color: #d10000;
 }
 #about-button:hover {
@@ -119,177 +136,215 @@ nav a:hover::before {
 
 
 
-
-/*-------------------------- THE MAIN SECTION ----------------------*/
-
-
-
-main .content{
-    margin: auto;
-    padding: 5%;
-}
-
-h1 {
-    color:white;
-    font-family: 'Comfortaa', cursive;
-    font-family: 'Inter', sans-serif;
-    font-size: 400%;
-    text-shadow: 2px 2px 2px black;
-    stroke: black;
-}
-
-p {
-    font-size: 120%;
-}
-
-
-/*------------------FOOTER---------------------*/
-
-=======
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-
-body {
+.content {
     margin: 0 auto;
-    /*background: url(img/sad.gif);*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Comfortaa';
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Varela Round', sans-serif;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-header {
-    background: white;
-    position: fixed;
-    width: 100%;
-    z-index: 3;
+.art-title {
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
-header::after {
-    content:'';
-    display: table;
-    clear: both;
-
-}
-
-.topnav {
+.art-container {
     margin: 0 auto;
-    width: 95%;
-    padding: 10px;
+    display: flex;
+    
 }
 
-/* making the avatar change upon hover */
-
-.leoActiv, .leoAvatar {
-    width:275px;
+.art-grid {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    gap: 15px;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 
-.leo img {
+.art-grid .image {
+    cursor: pointer;
     object-fit: cover;
+    transition: 0.3s;
 }
 
-.leoActiv{
-    display:none;
+.art-grid .image:hover {
+    filter: brightness(0.8);
 }
 
-.leo:hover .leoAvatar {
-    display:none;
+#image-viewer {
+    display: none;
+    z-index: 999;
 }
 
-.leo:hover .leoActiv {
-    display:inline-block;
+#image-viewer div {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
-.leo:hover {
+#image-viewer div img{
+    display: block;
+    
+    height: 80%;
+    max-width: 50%;
+    animation: showImage 0.5s;
+}
+
+@keyframes showImage {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 30px;
+    transition: 0.3s;
     cursor: pointer;
 }
 
+#close:hover, #close:focus {
+    opacity: 0.8;
 
-/* -------------- NAV SECTION OF TOP BAR ----------------------*/
-
-nav {
-    float: right;
 }
 
-nav ul {
+@media screen and (max-width: 700px) {
+    .viewer {
+        width: 100%;
+    }
+}
+
+img {
+    border-radius: 10px;
+    image-resolution: 100dpi;
+}
+
+/* ---- The Wave SVG Mechanics ---- */
+.spacer {
+    aspect-ratio: 960/150;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    .layer1 {
+        background-image: url("../img/toplayer2.svg");
+        margin-bottom: -28px;
+    }
+    .layer2 {
+        margin-top: -51px;
+        background-image: url('../img/downlayer2.svg');
+    }
+.footerspacer {
+    aspect-ratio: 900/50;
+    width: 100%;
     margin: 0;
-    padding: 0;
-    list-style: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    .footerlayer {
+        background-image: url('../img/footerlayer.svg');
+        margin-bottom: -1px;
+    }
+
+
+/* ---- Footer ---- */
+.bottom {
+    background-color: #0066FF;
+    width: 100%;
+    margin: 0;
 }
 
-nav li{
-    display: inline-block;
-    margin-left: 80px;
-    padding-top: 15px;
-
-    position: relative;
-}
-
-nav ul li a {
-    color: black;
+.bottom a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 17px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+    .contact-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    .contact-links a i {
+        margin-top: 15px;
+        color: white;
+    }
+        .contact-links a i:hover {
+            color: lightslategrey;
+            transition: ease-in .1s;
+        }
+    .contact p {
+        color: white;
+        margin: 0 auto;
+    }
+        .contact p:nth-child(2) {
+            padding-top: 20px;
+        }
+        .contact p:nth-child(3) {
+            padding-bottom: 40px;
+        }
+
+
+.copyright {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #0066FF;
+    position: relative;
+    bottom: 0;
+}
+.copyright p {
+    background-color: #0066FF;
+    color: white;
+    bottom:0;
+    margin: 0;
+    padding: 10px;
+    font-family:'Courier New', Courier, monospace;
 }
 
-#home-button {
-    color: #007fff;
-}
-#work-button:hover {
-    color: #03ac13;
-    transition: 0.25s ease-in;
-}
-#art-button:hover {
-    color: #d10000;
-}
-#about-button:hover {
-    color: rgb(105, 105, 105);
+
+
+
+/* .art-box {
+    height: 350px;
+    width: 300px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+
+} */
+
+/* .art-box:hover {
+    filter: brightness(0.7);
+    transition: 0.1s ease-in;
+    cursor: pointer;
 }
 
-nav a:before {
-    content: '';
-    display: block;
-    height: 5px;
+.art-box img {
     width: 100%;
-    background-color: black ;
-
-    position: absolute;
-    top: 5px;
-    width: 0;
-    
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
-
-
-
-/*-------------------------- THE MAIN SECTION ----------------------*/
-
-
-
-main .content{
-    margin: auto;
-    padding: 5%;
-}
-
-h1 {
-    color:white;
-    font-family: 'Comfortaa', cursive;
-    font-family: 'Inter', sans-serif;
-    font-size: 400%;
-    text-shadow: 2px 2px 2px black;
-    stroke: black;
-}
-
-p {
-    font-size: 120%;
-}
-
-
-/*------------------FOOTER---------------------*/
-
->>>>>>> b0de3761e5fbab478a3c591853320b1ac957c2a6
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px ;
+} */
