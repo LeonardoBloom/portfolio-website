@@ -346,8 +346,8 @@ nav a:hover::before {
     .pic_desc_desc {
         
         margin-top: 10px;
-        width: 50%;
-        text-align: center;
+        width: 40%;
+        text-align: justify;
     }
         .pic_desc_desc p {
             color: white;
